@@ -1,0 +1,106 @@
+.bg-head {
+  background-color: black;
+  width: 100%;
+  height: 700px;
+}
+
+.color-gradient {
+  background: rgb(219, 111, 38);
+  background: linear-gradient(
+    76deg,
+    rgba(219, 111, 38, 1) 0%,
+    rgba(209, 156, 27, 1) 18%,
+    rgba(111, 87, 189, 1) 64%,
+    rgba(188, 25, 240, 1) 87%,
+    rgba(86, 18, 109, 1) 100%
+  );
+
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+
+.gradient-text {
+  background-image: linear-gradient(
+    76deg,
+    rgba(219, 111, 38, 1) 0%,
+    rgba(209, 156, 27, 1) 18%,
+    rgba(111, 87, 189, 1) 64%,
+    rgba(188, 25, 240, 1) 87%,
+    rgba(86, 18, 109, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 10rem;
+  font-family: "Monoton", cursive;
+}
+
+.icon {
+  display: inline-block;
+  width: 10%;
+  height: 60vh;
+  background-image: url("./src/assets/vinyl-3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px;
+  animation: spin 5s linear infinite;
+  position: relative;
+  top: 180px;
+  right: 8px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn {
+  border-radius: 20px;
+  width: 200px;
+  padding: 10px;
+}
+
+.left-section {
+  width: 550px;
+}
+
+.article-left {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+}
+
+.parallax-container {
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-background {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.parallax-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
