@@ -12,7 +12,7 @@ function Nav() {
             Home
           </Link>
         </div>
-        <div className="nav-item">
+        <div className="nav-item mb-5">
           <Link to="/TrocMarket" className="nav-link active text-white">
             TrocMarket
           </Link>
