@@ -1,8 +1,21 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import Card from "@components/Card";
+import apiConnexion from "@services/apiConnexion";
 
 import "./Home.css";
 
-export default function Home() {
+function Home() {
+  const [randomData, setRandomData] = useState([]);
+
+  useEffect(() => {
+    apiConnexion
+      .get(`/vinyles/rand`)
+
+      .then((data) => setRandomData(data.data))
+
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div>
       <header className="bg-head  d-flex flex-column justify-content-center">
@@ -32,7 +45,7 @@ export default function Home() {
               Le principe de troc de vinyles est un échange entre deux personnes
               dans lequel chacun donne un vinyle en échange d'un autre vinyle.
               L'échange se fait généralement en fonction de la qualité et de la
-              rareté des disques.{" "}
+              rareté des disques.
             </p>
             <div className="cta">
               <div className="btn btn-outline color-gradient text-white ">
@@ -64,6 +77,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section>
+        <div className="section-title mb-4">Nos Top Vinyles</div>
+        <div className="container d-flex justify-content-center ">
+          {randomData.map((vinyles) => (
+            <Card key={vinyles.id} vinyles={vinyles} />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
+export default Home;
