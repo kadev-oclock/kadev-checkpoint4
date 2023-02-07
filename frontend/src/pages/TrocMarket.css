@@ -1,0 +1,13 @@
+.section-title {
+  font-family: "Monoton", cursive;
+  font-size: 6rem;
+  background: rgb(219, 111, 38);
+  background: linear-gradient(
+    76deg,
+    rgba(219, 111, 38, 1) 0%,
+    rgba(209, 156, 27, 1) 18%,
+    rgba(111, 87, 189, 1) 64%,
+    rgba(188, 25, 240, 1) 87%,
+    rgba(86, 18, 109, 1) 100%
+  );
+}
